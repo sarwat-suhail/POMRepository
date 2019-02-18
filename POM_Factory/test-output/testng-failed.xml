@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Login Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.pagefactory.testcases.LoginTest">
+        <methods>
+          <include name="doLogin" invocation-numbers="0 1"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.LoginTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+  <test thread-count="5" name="Change Pic Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.pagefactory.testcases.ChangePicTest">
+        <methods>
+          <include name="changePicTest" invocation-numbers="0 1"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.ChangePicTest -->
+    </classes>
+  </test> <!-- Change Pic Test(failed) -->
+  <test thread-count="5" name="Profile Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.pagefactory.testcases.ProfileTest">
+        <methods>
+          <include name="profileTest" invocation-numbers="0 1"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.ProfileTest -->
+    </classes>
+  </test> <!-- Profile Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
