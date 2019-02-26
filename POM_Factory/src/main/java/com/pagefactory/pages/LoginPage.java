@@ -31,6 +31,16 @@ public class LoginPage extends BasePage {
 		
 	}
 	
+	public LandingPage SignUp() {
+		
+		
+		LandingPage landingPage=new LandingPage(driver,test);
+		PageFactory.initElements(driver, landingPage);
+		return landingPage;
+		
+		
+	}
+	
 	public Object doLogin(String username, String password) {
 		
 		test.log(Status.INFO, "Trying to Login with "+username+"\\"+password);
@@ -38,6 +48,9 @@ public class LoginPage extends BasePage {
 		Email.sendKeys(username);
 		
 		pass.sendKeys(password);
+		
+		System.out.println(submit.isEnabled());
+		
 		submit.click();
 		
 		boolean result=isElementPresent(Constants.PROFILE_LINK);

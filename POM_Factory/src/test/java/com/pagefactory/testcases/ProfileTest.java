@@ -45,11 +45,13 @@ public class ProfileTest extends BaseTest {
 		LaunchPage launchPage=new LaunchPage(driver,test);
 		PageFactory.initElements(driver, launchPage);
 		
-		
+	
 		
 		test.log(Status.INFO, "navigating to "+Constants.WEBSITE_URL);
 				
 		LoginPage loginPage=launchPage.gotoLoginPage();
+		
+	LandingPage landingPage=loginPage.SignUp();
 		
 	Object page=loginPage.doLogin(data.get("UserName"), data.get("Password"));
 	
@@ -86,7 +88,7 @@ public class ProfileTest extends BaseTest {
 	
 	{
 	
-	LandingPage landingPage=(LandingPage)page;
+ landingPage=(LandingPage)page;
 	
 	GeneralSettingPage generalSettings=landingPage.getMenu().gotoSetting();
 	
